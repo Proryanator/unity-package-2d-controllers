@@ -8,13 +8,11 @@ namespace Proryanator.Controllers2D {
     /// Does nothing to change sprite's direction.
     /// </summary>
     public class TopDownController : Base2DController {
-
-        [SerializeField] private bool _faceDirection = false;
-
-        [SerializeField] private float _maxVelocity = 20f;
-
-        [Tooltip("If true, will add force to the object times the force multiplier. If not, will simply set the velocity to the max velocity.")]
+        [Tooltip("If true, will add force to the object times the force multiplier.")]
         [SerializeField] private bool _useForce = false;
+
+        [Tooltip("The maximum velocity this object will travel, regardless if you use force or not.")]
+        [SerializeField] private float _maxVelocity = 20f;
 
         private bool _allowedToMove = true;
 
@@ -37,20 +35,13 @@ namespace Proryanator.Controllers2D {
             } else if (direction != Vector2.zero) {
                 rigidbody2D.velocity = GetVector2From(direction, _maxVelocity);
             }
-
-            // if we want, face the player in the direction of it's movement
-            if (_faceDirection && direction != Vector2.zero) {
-                float angle = Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg * -1;
-                transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-            }
         }
 
+        /// <summary>
+        /// You may want to postpone movement of this script for some reason. This allows you to do just that.
+        /// </summary>
         public void PostponeMovement(float seconds) {
             StartCoroutine(PostponeMovementRoutine(seconds));
-        }
-
-        public void EnableMovementAgain() {
-            _allowedToMove = true;
         }
 
         private IEnumerator PostponeMovementRoutine(float seconds) {
