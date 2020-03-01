@@ -17,7 +17,7 @@
 	{
 		"displayName": "Top Down Controller Sample",
 		"description": "A sample of how to use the Top Down Controllers in this package.",
-		"path": "Samples~/TopDownControllers"
+		"path": "Samples/TopDownControllers"
 	}
 	]
 }
