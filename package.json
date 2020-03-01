@@ -1,0 +1,16 @@
+{
+	"name": "com.proryanator.controllers2d",
+	"version": "1.0.0",
+	"displayName": "Proryanator Controllers 2D",
+	"description": "A collection of 2D controller scripts that you'd typically use as a baseline for your 2D games. Makes use of Unity's new InputSystem.",
+	"unity": "2019.3",
+	"dependencies": {
+		"com.unity.inputsystem": "1.0.0-preview.5"
+	},
+	"keywords": ["2D", "Controllers", "proryanator"],
+	"author": {
+		"name": "Ryan Laseter",
+		"email": "proryanator@gmail.com",
+		"url": ""
+	}
+}

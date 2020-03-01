@@ -1,0 +1,4 @@
+﻿{
+	"name": "Proryanator.Controllers2D",
+	"references": ["Unity.InputSystem"]
+}
