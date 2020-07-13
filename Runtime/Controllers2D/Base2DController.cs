@@ -26,5 +26,15 @@ namespace Proryanator.Controllers2D{
         public void SetDirection(InputAction.CallbackContext context) {
             direction = context.ReadValue<Vector2>();
         }
+        
+        /// <summary>
+        /// Gets the current direction of movement.
+        ///
+        /// Useful if you need to perform extra logic to determine what direction you're moving.
+        /// </summary>
+        /// <returns></returns>
+	    public Vector2 GetDirection(){
+	        return direction;
+	    }
     }
 }
