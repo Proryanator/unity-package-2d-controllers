@@ -41,6 +41,10 @@ namespace Proryanator.Controllers2D {
 	    public Vector2 GetFacingDirection(){
 		    return _facingDirection;
 	    }
+
+	    public FacingDirection GetStartingDirection(){
+		    return _startingDirection;
+	    }
 	    
 	    /// <summary>
 	    /// Should you want to only move the mouse when you move it, you'd want to set this up as a callback
