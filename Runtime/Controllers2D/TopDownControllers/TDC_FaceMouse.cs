@@ -93,7 +93,7 @@ namespace Proryanator.Controllers2D {
 	    }
 
 	    protected Quaternion GetRotationForStartingDirection(float angle, FacingDirection direction) {
-	        return Quaternion.AngleAxis((angle + (float)_startingDirection) % 360, Vector3.forward);
+	        return Quaternion.AngleAxis((angle + (float)direction) % 360, Vector3.forward);
 	    }
 
 	    private Vector2 ConvertFacingDirectionToVector(FacingDirection direction){
