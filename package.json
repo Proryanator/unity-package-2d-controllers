@@ -1,6 +1,6 @@
 {
 	"name": "com.proryanator.controllers2d",
-	"version": "1.01",
+	"version": "1.02",
 	"displayName": "Proryanator Controllers 2D",
 	"description": "A collection of 2D controller scripts that you'd typically use as a baseline for your 2D games. Makes use of Unity's new InputSystem.",
 	"unity": "2019.3",
