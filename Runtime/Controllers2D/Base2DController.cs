@@ -23,7 +23,7 @@ namespace Proryanator.Controllers2D{
         /// Using Unity's new InputSystem, read input and store it as the current direction.
         /// Currently only works with 2D.
         /// </summary>
-        public void SetDirection(InputAction.CallbackContext context) {
+        public virtual void SetDirection(InputAction.CallbackContext context) {
             direction = context.ReadValue<Vector2>();
         }
         
